@@ -1,0 +1,136 @@
+{
+	"layer": "top",	
+"spacing":20,
+	"position": "top",
+
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": [],
+    "modules-right": ["tray","mpris", "network","temperature", "pulseaudio", "custom/dualbat", "clock", "custom/noti"],
+	    
+
+"hyprland/workspaces": {
+    "format": "{name}",
+    "format-icons": {
+      "active": "",
+      "default": "",
+      "persistent": ""
+    },
+    "on-scroll-up": "hyprctl dispatch workspace r-1",
+    "on-scroll-down": "hyprctl dispatch workspace r+1",
+    "all-outputs": false,
+    "persistent_workspaces": {
+      "*": 5
+    }
+  },
+
+
+	"hyprland/window": {
+    	"format": "{}",
+    	"max-length": 150
+},
+
+
+    "tray": {
+        "icon-size": 14,
+        "spacing": 4
+},
+
+
+    "clock": {
+        "format": "  {:%a %b %e    %H:%M}",
+        "interval": 30
+},
+
+    
+
+"custom/dualbat": {
+  "exec": "~/.bin/dualbat.sh",
+    "interval": 30,
+    "return-type": "json",
+    "format": "{}",
+    "tooltip": true
+},
+
+    "network": {
+        "tooltip": true,
+        "format-wifi": "{essid}",
+        "format-icons": ["󰤟", "󰤢", "󰤥"],
+      //  "format-wifi": "<i class='fa-solid fa-wifi-slash'></i>",
+        "rotate": 0,
+        "format-ethernet": "󰈀 ",
+        "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+        "format-linked": "󰈀 {ifname} (No IP)",
+        "format-disconnected": " ",
+        "tooltip-format-disconnected": "Disconnected",
+        "interval": 2,
+    },
+
+    "temperature": {
+	   	"thermal-zone": 0,
+		"format": "{icon} {temperatureC}°C",
+		"format-icons":[""],
+		"interval": 30
+},
+
+
+	"backlight": {
+    	"device": "intel_backlight",
+    	"format": "{icon}  {percent}%  ",
+    	"format-icons": ["","","",""],
+    	"interval": 60
+},
+
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "  {volume}%  ",
+        "format-muted":"婢  Mute",
+        "interval": 60,
+
+        "format-icons": {
+        "default": [""]
+},
+            
+       "on-click": "blueman-manager"    
+
+
+},
+
+
+"mpris": {
+	"format": "{player_icon} {title}-{artist}",
+	"format-paused": "<span color='grey'>{player_icon} {title}-{artist}</span>",
+	"max-length": 40,
+	"player-icons": {
+		"default": "⏸",
+		"mpv": "🎵",
+		"tauon": "🎵"
+	},
+	"status-icons": {
+		"paused": "▶" 
+	},
+	"ignored-players": ["firefox"]
+},
+
+  "custom/noti": {
+    "tooltip": false,
+    "format": "{icon}  ",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+
+}

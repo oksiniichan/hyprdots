@@ -1,0 +1,101 @@
+@import "/home/oksi/.colors/colors.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px;
+}
+
+
+window#waybar { 
+    background-color: @surface; 
+    color: #ffffff;    
+}
+
+
+.modules-left {
+	background-color: @surface;
+	padding: 0px 0px 0px 0px;
+}
+
+
+.modules-right {
+	background-color: @surface;
+	color: @tertiary;
+	padding: 0px 0px 0px 0px;
+}
+
+
+#custom-scratch {
+	background-color: #323232;
+	color: #b8b8b8;
+	padding: 0px 9px 0px 9px;
+}
+
+
+#workspaces {
+}
+
+
+#workspaces button {
+	padding: 0px 10px 0px 10px; 
+ 	min-width: 1px;
+	border-radius: 0;
+	margin:0;
+	color: #888888;
+}
+
+
+#workspaces button.active { 
+	padding: 0px 10px 0px 10px; 
+	margin: 0;
+	background-color: @primary;
+	color: @surface;
+	border-radius: 0;
+}
+
+#mode { 
+	 background-color: #900000;
+	 color: #ffffff;
+     padding: 0px 5px 0px 5px;
+     border: 1px solid #2f343a;
+}
+
+
+#window {
+	 color: @tertiary;
+	 background-color: @surface;
+     padding: 0px 10px 0px 10px;
+}
+
+
+window#waybar.empty #window {
+	background-color: @surface;
+	color: transparent;
+}
+
+
+window#waybar.empty {
+	background-color: @surface;
+}
+
+
+#network, #temperature, #backlight, #pulseudio, #battery #custom-noti {
+    padding: 0px 0px 0px 0px;
+}
+    
+
+#clock {
+	margin: 0px 0px 0px 0px;
+}
+
+
+
+#battery.critical {
+   color: #ff5555;
+}
+
+
+#network.disconnected {
+    color: #ff5555;
+}
+
