@@ -1,0 +1,142 @@
+configuration {
+    font: "JetBrainsMono Nerd Font 12";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    display-drun: "Apps";
+    drun-display-format: "{name}";
+    scroll-method: 0;
+    disable-history: false;
+    sidebar-mode: false;
+}
+
+@import "~/.colors/colors-rofi.rasi"
+
+window {
+    background-color: @surface;
+    border: 0;
+    padding: 30;
+}
+
+mainbox {
+    border: 0;
+    padding: 0;
+}
+
+listview {
+    lines: 10;
+    columns: 3;
+    fixed-height: 0;
+    border: 8px 0px 0px;
+    border-color: @tertiary;
+    spacing: 8px;
+    scrollbar: false;
+    padding: 2px 0px 0px;
+}
+
+message {
+    border: 2px 0px 0px;
+    border-color: @tertiary;
+    padding: 1px;
+}
+
+textbox {
+    text-color: @on-surface;
+}
+
+element {
+    border: 0;
+    padding: 1px;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+element.normal.normal {
+    background-color: @surface;
+    text-color: @on-surface;
+}
+
+element.normal.urgent {
+    background-color: @error;
+    text-color: @on-error;
+}
+
+element.normal.active {
+    background-color: @primary;
+    text-color: @on-primary;
+}
+
+element.selected.normal {
+    background-color: @primary;
+    text-color: @on-primary;
+}
+
+element.selected.urgent {
+    background-color: @error;
+    text-color: @on-error;
+}
+
+element.selected.active {
+    background-color: @primary;
+    text-color: @on-primary;
+}
+
+element.alternate.normal {
+    background-color: @surface;
+    text-color:       @on-surface;
+}
+/* Removed alternate.* blocks as requested */
+
+scrollbar {
+    width: 4px;
+    border: 0;
+    handle-color: @on-surface;
+    handle-width: 8px;
+    padding: 0;
+}
+
+mode-switcher {
+    border: 2px 0px 0px;
+    border-color: @tertiary;
+}
+
+button {
+    spacing: 0;
+    text-color: @on-surface;
+}
+
+button.selected {
+    background-color: @primary;
+    text-color: @on-primary;
+}
+
+inputbar {
+    spacing: 0;
+    text-color: @on-surface;
+    padding: 1px;
+    children: [ prompt, textbox-prompt-colon, entry, case-indicator ];
+}
+
+case-indicator {
+    spacing: 0;
+    text-color: @on-surface;
+}
+
+entry {
+    spacing: 0;
+    text-color: @on-surface;
+}
+
+prompt {
+    spacing: 0;
+    text-color: @on-surface;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+    margin: 0px 0.3em 0em 0em;
+    text-color: @on-surface;
+}

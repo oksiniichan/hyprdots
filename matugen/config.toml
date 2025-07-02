@@ -1,0 +1,54 @@
+[config.wallpaper]
+command = "swww"
+arguments = ["img", "--transition-type", "center"]
+set = true
+
+
+[templates.waybar]
+input_path = './templates/colors.css'
+output_path = '~/.colors/colors.css'
+post_hook = '~/.bin/wayre'
+
+
+[templates.foot]
+input_path = './templates/colors-foot.ini'
+output_path = '~/.colors/colors-foot.ini'
+
+[templates.hyprland]
+input_path = "./templates/colors-hyprland.conf"
+output_path = "~/.colors/colors-hyprland.conf"
+
+[templates.hyprlock]
+input_path = './templates/colors-hyprlock.conf'
+output_path = '~/.colors/colors-hyprlock.conf'
+
+
+[templates.qt]
+input_path = './templates/colors-qtct.conf'
+output_path = '~/.colors/colors-qtct.conf'
+
+[templates.gtk3]
+input_path = './templates/colors-gtk.css'
+output_path = '~/.config/gtk-3.0/gtk.css'
+
+[templates.cava]
+input_path = './templates/colors-cava'
+output_path = '~/.config/cava/config'
+
+[templates.rofi]
+input_path = './templates/colors-rofi.rasi'
+output_path = '~/.colors/colors-rofi.rasi'
+
+[templates.swaync]
+input_path = './templates/colors-swaync.css'
+output_path = '~/.colors/colors-swaync.css'
+
+[templates.tofi]
+input_path = './templates/colors-tofi'
+output_path = '~/.config/tofi/config'
+
+
+[templates.zathura]
+input_path = './templates/colors-zathura'
+output_path = '~/.colors/colors-zathura'
+
