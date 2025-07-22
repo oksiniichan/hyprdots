@@ -3,52 +3,40 @@ command = "swww"
 arguments = ["img", "--transition-type", "center"]
 set = true
 
-
 [templates.waybar]
-input_path = './templates/colors.css'
-output_path = '~/.colors/colors.css'
+input_path = 'templates/colors.css'
+output_path = '~/.cache/wal/colors.css'
 post_hook = '~/.bin/wayre'
 
 
 [templates.foot]
-input_path = './templates/colors-foot.ini'
-output_path = '~/.colors/colors-foot.ini'
+input_path = 'templates/colors-foot.ini'
+output_path = '~/.cache/wal/colors-foot.ini'
 
 [templates.hyprland]
-input_path = "./templates/colors-hyprland.conf"
-output_path = "~/.colors/colors-hyprland.conf"
-
-[templates.hyprlock]
-input_path = './templates/colors-hyprlock.conf'
-output_path = '~/.colors/colors-hyprlock.conf'
-
+input_path = "templates/colors-hypr.conf"
+output_path = "~/.cache/wal/colors-hypr.conf"
 
 [templates.qt]
-input_path = './templates/colors-qtct.conf'
-output_path = '~/.colors/colors-qtct.conf'
+input_path = 'templates/colors-qtct.conf'
+output_path = '~/.cache/wal/colors-qtct.conf'
 
 [templates.gtk3]
-input_path = './templates/colors-gtk.css'
+input_path = 'templates/colors-gtk.css'
 output_path = '~/.config/gtk-3.0/gtk.css'
 
 [templates.cava]
-input_path = './templates/colors-cava'
+input_path = 'templates/colors-cava'
 output_path = '~/.config/cava/config'
 
 [templates.rofi]
-input_path = './templates/colors-rofi.rasi'
-output_path = '~/.colors/colors-rofi.rasi'
-
-[templates.swaync]
-input_path = './templates/colors-swaync.css'
-output_path = '~/.colors/colors-swaync.css'
+input_path = 'templates/colors-rofi.rasi'
+output_path = '~/.cache/wal/colors-rofi.rasi'
 
 [templates.tofi]
-input_path = './templates/colors-tofi'
+input_path = 'templates/colors-tofi'
 output_path = '~/.config/tofi/config'
 
-
-[templates.zathura]
-input_path = './templates/colors-zathura'
-output_path = '~/.colors/colors-zathura'
-
+[templates.fish]
+input_path = 'templates/colors-fish.fish'
+output_path = '~/.cache/wal/colors-fish.fish'
